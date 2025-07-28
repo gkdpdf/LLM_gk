@@ -93,7 +93,7 @@ info_example_tool = Tool(
 toolkit = SQLDatabaseToolkit(db=db, llm=llm)
 tools = toolkit.get_tools() + [relationship_tool, info_example_tool]
 
-agent = initialize_agent(
+agent = initialize_agent( 
     tools=tools,
     llm=llm,
     agent_type=AgentType.OPENAI_FUNCTIONS,
